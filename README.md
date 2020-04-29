@@ -19,3 +19,9 @@
     - 화면의 단위(px) : 절대 크기 나타낼때 고정된 크기
     - 화면의 단위(dp) : 디바이스 단위 동일한 크기
     
+## 02_linearlayout
+    - 중앙정렬
+        android:gravity="center"
+    - 레이아웃 방향
+        수직 : android:orientation="vertical"
+        수평 : android:orientation="horizontal"

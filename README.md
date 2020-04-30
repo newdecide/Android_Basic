@@ -25,3 +25,10 @@
     - 레이아웃 방향
         수직 : android:orientation="vertical"
         수평 : android:orientation="horizontal"
+
+## 03_relativelayout
+    - layout_centerInParent : 부모 컨테이너의 수평과 수직 방향의 중앙
+    - layout_toRightOf : 지정한 레이아웃의 오른쪽
+    - layout_above : 지정한 레이아웃의 위쪽
+    - layout_below : 지정한 레이아웃의 아래쪽
+    

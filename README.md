@@ -31,4 +31,12 @@
     - layout_toRightOf : 지정한 레이아웃의 오른쪽
     - layout_above : 지정한 레이아웃의 위쪽
     - layout_below : 지정한 레이아웃의 아래쪽
-    
+    - layout_toLeftOf : 지정한 레이아웃의 왼쪽
+    - 오른쪽 위쪽 대각선 붙이기 : layout_above + layout_toRightOf
+    - 왼쪽 위쪽 대각선 붙이기 : layout_above + layout_toLeftOf
+    - 오른쪽 아래쪽 대각선 붙이기 : layout_below + layout_toRightOf
+    - 왼쪽 아래쪽 대각선 붙이기 : layout_below + layout_toLeftOf
+    - 중앙의 위쪽 붙이기 : layout_centerInParent + layout_above
+    - 중앙의 아래쪽 붙이기 : layout_centerInParent + layout_below
+    - 중앙의 오른쪽 붙이기 : layout_centerInParent + layout_toRightOf
+    - 중앙의 왼쪽 붙이기 : layout_centerInParent + layout_toLeftOf

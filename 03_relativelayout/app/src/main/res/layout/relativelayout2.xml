@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/centerInParent"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:background="@color/colorAccent"
+        android:layout_centerInParent="true"/>
+
+    <TextView
+        android:id="@+id/toRightOf_above"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:background="@color/colorPrimary"
+        android:layout_above="@+id/centerInParent"
+        android:layout_toRightOf="@+id/centerInParent" />
+
+    <TextView
+        android:id="@+id/toLeftOf_above"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:background="@color/colorPrimary"
+        android:layout_above="@+id/centerInParent"
+        android:layout_toLeftOf="@+id/centerInParent" />
+
+    <TextView
+        android:id="@+id/toRightOf_below"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:background="@color/colorPrimary"
+        android:layout_below="@+id/centerInParent"
+        android:layout_toRightOf="@+id/centerInParent" />
+
+    <TextView
+        android:id="@+id/toLeftOf_below"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:background="@color/colorPrimary"
+        android:layout_below="@+id/centerInParent"
+        android:layout_toLeftOf="@+id/centerInParent" />
+
+    <TextView
+        android:id="@+id/centerInParent_above"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:background="@color/colorPrimaryDark"
+        android:layout_above="@+id/centerInParent"
+        android:layout_centerInParent="true"/>
+
+    <TextView
+        android:id="@+id/centerInParent_below"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:background="@color/colorPrimaryDark"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/centerInParent"/>
+
+    <TextView
+        android:id="@+id/centerInParent_toRightOf"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:background="@color/colorPrimaryDark"
+        android:layout_centerInParent="true"
+        android:layout_toRightOf="@+id/centerInParent"/>
+
+    <TextView
+        android:id="@+id/centerInParent_toLeftOf"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:background="@color/colorPrimaryDark"
+        android:layout_centerInParent="true"
+        android:layout_toLeftOf="@+id/centerInParent"/>
+
+</RelativeLayout>

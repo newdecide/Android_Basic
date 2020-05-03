@@ -55,3 +55,12 @@
     - layout_alignParentLeft : 뷰를 부모의 왼쪽에 맞춤
 
 ![relativelayout3](https://user-images.githubusercontent.com/6762927/80863262-f7a55c00-8cb5-11ea-9b0b-eae32ba1a544.png)
+
+
+# 04 framelayout
+- 여러개의 레이아웃을 겹쳐서 사용
+- 전체화면 레이아웃에 나머지 레이아웃을 위에 그림
+- 겹치는 부분은 가장 위의 레이아웃에 가려짐
+
+![framelayout1](https://user-images.githubusercontent.com/6762927/80915134-1de8fb80-8d8b-11ea-93bb-e98a3d6a7bef.png)
+

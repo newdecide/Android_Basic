@@ -57,7 +57,7 @@
 ![relativelayout3](https://user-images.githubusercontent.com/6762927/80863262-f7a55c00-8cb5-11ea-9b0b-eae32ba1a544.png)
 
 
-# 04 framelayout
+# 04_framelayout
 - 여러개의 레이아웃을 겹쳐서 사용
 - 전체화면 레이아웃에 나머지 레이아웃을 위에 그림
 - 겹치는 부분은 가장 위의 레이아웃에 가려짐
@@ -87,3 +87,10 @@
 - <span style="color:#C72865">#C72865</span>
     <span style="color:#457591">#457591</span>
     <span style="color:#4B6038">#4B6038</span>
+
+# 05_scrollview
+- 세로 스크롤바 : android:scrollbars="vertical"
+- 뷰에 레이아웃의 크기만큼 스크롤을 내릴 수 있음
+- 스크롤뷰보다 크기가 작으면 스크롤이 안 생김 
+- 스크롤 화면 구현할 때 사용
+![scrollview](https://user-images.githubusercontent.com/6762927/81062565-2703d500-8f11-11ea-9998-64fd3720317e.png)

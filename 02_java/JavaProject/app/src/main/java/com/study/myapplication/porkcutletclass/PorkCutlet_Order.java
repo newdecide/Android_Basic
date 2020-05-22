@@ -1,4 +1,4 @@
-package com.study.myapplication;
+package com.study.myapplication.porkcutletclass;
 
 public class PorkCutlet_Order {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.study.myapplication.carclass;
+package com.study.myapplication.classextends;
 
 public class Truck extends Car{
     public Truck(){

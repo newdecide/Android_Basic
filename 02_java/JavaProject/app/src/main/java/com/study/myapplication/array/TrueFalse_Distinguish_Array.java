@@ -1,4 +1,4 @@
-package com.study.myapplication;
+package com.study.myapplication.array;
 
 public class TrueFalse_Distinguish_Array {
     public static void main(String[] args) {

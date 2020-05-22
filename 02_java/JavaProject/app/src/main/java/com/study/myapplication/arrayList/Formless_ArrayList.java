@@ -1,4 +1,4 @@
-package com.study.myapplication;
+package com.study.myapplication.arrayList;
 
 import java.util.ArrayList;
 

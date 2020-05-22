@@ -1,4 +1,4 @@
-package com.study.myapplication.carclass;
+package com.study.myapplication.classextends;
 
 public class Electric_Car extends Car {
     public Electric_Car(){

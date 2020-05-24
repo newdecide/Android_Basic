@@ -1,4 +1,4 @@
-package com.study.myapplication.interfacea;
+package com.study.myapplication.animalinterface;
 
 public class Tutle implements Animal_Interface {
     @Override

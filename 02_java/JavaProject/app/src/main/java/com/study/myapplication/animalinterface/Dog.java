@@ -1,4 +1,4 @@
-package com.study.myapplication.interfacea;
+package com.study.myapplication.animalinterface;
 
 public class Dog implements Animal_Interface {
 

@@ -6,17 +6,38 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.util.Log;
-
-import java.security.PrivateKey;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     String TAG = "lifecycle";
+    String SAVE_STATE_KEY = "data save";
+    String save_data;
+    TextView savetextview;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Log.d("lifeCycle","onCreate");
+
+        if(savedInstanceState != null){
+            save_data = savedInstanceState.getString(SAVE_STATE_KEY);
+        }
+
         setContentView(R.layout.activity_main);
+        savetextview = (TextView) findViewById(R.id.savetext);
+
+    }
+
+    @Override
+    public void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        Log.d(SAVE_STATE_KEY, "onSaveInstanceState, 화면전환 누름");
+        savetextview.setText(SAVE_STATE_KEY);
+    }
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        Log.d(SAVE_STATE_KEY, "onRestoreInstanceState");
     }
 
     @Override

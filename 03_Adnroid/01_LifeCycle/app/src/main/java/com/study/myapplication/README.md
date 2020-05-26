@@ -7,3 +7,6 @@
 - onDestroy() : Activity 활동 종료
 
 ![image](https://user-images.githubusercontent.com/6762927/82819981-4d97a900-9edc-11ea-88d1-73d14a069d51.png)
+
+- onSaveInstanceState() : 데이터 화면 전환시 데이터가 날라가지 않도록 저장
+- onRestoreInstanceState() : 데이터 번들에 저장

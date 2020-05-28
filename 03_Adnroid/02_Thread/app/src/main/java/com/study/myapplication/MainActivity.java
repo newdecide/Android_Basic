@@ -29,5 +29,12 @@ public class MainActivity extends AppCompatActivity {
 
         Thread thread2 = new Thread(runnable);
         thread2.start();
+
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                Toast.makeText(MainActivity.this, "thread_run03", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }

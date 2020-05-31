@@ -1,5 +1,6 @@
 package com.study.myapplication;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -24,6 +25,15 @@ public class MainActivity extends AppCompatActivity {
                 Explicitintent.putExtra("INTENT_KEY_INT", 5);
                 Explicitintent.putExtra("INTENT_KEY_STRING", "STRING");
                 startActivityForResult(Explicitintent, REQUEST_CODE);
+            }
+        });
+
+        TextView implicittext = (TextView) findViewById(R.id.implicit_intent);
+        implicittext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent Implicitintent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.google.com"));
+                startActivity(Implicitintent);
             }
         });
     }

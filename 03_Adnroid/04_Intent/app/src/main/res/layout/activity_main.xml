@@ -21,4 +21,10 @@
         android:text="명시적 인텐트"
         android:textSize="20dp"/>
 
+    <TextView
+        android:id="@+id/implicit_intent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="암시적 인텐트"
+        android:textSize="20dp"/>
 </LinearLayout>

@@ -18,6 +18,8 @@ public class SecondActivity extends AppCompatActivity {
         String data2 = intent.getStringExtra("INTENT_KEY_STRING");
         Log.d("intent_key_int", "" + data);
         Log.d("intent_key_string", "" + data2);
+        intent.putExtra("RESULT", "성공");
+        setResult(200, intent);
 
     }
 }

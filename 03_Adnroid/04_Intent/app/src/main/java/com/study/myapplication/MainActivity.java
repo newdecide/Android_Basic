@@ -6,12 +6,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
     int REQUEST_CODE = 1000;
+    TextView resultSuccessText;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent Explicitintent = new Intent(getApplicationContext(), SecondActivity.class);
                 Explicitintent.putExtra("INTENT_KEY_INT", 5);
                 Explicitintent.putExtra("INTENT_KEY_STRING", "STRING");
-                startActivityForResult(Explicitintent, REQUEST_CODE);
+                startActivity(Explicitintent);
             }
         });
 
@@ -36,5 +38,27 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(Implicitintent);
             }
         });
+
+        resultSuccessText = findViewById(R.id.result_Success);
+        resultSuccessText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent resultIntent = new Intent(getApplicationContext(),SecondActivity.class);
+                startActivityForResult(resultIntent, REQUEST_CODE);
+            }
+        });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        if (requestCode == REQUEST_CODE) {
+            if (resultCode == 200) {
+                String resultSuccess = data.getStringExtra("RESULT");
+                Log.d("onActivityResult", "result : " + resultSuccess);
+                resultSuccessText.setText(resultSuccess);
+            } else {
+                Log.d("onActivityResult", "실패");
+            }
+        }
     }
 }

@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="define_string">정의된 스트링 데이터입니다.</string>
 </resources>

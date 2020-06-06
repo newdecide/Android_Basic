@@ -1,4 +1,13 @@
 <resources>
     <string name="app_name">My Application</string>
     <string name="define_string">정의된 스트링 데이터입니다.</string>
+    <string-array name="define_string_array">
+        <item>안녕하세요</item>
+        <item>hello</item>
+        <item>곤니찌와</item>
+        <item>봉주르</item>
+        <item>니하오</item>
+        <item>알로하</item>
+    </string-array>
+
 </resources>

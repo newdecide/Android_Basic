@@ -3,8 +3,10 @@ package com.study.myapplication;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,11 +25,19 @@ public class MainActivity extends AppCompatActivity {
 
         // xml의 뷰 컴포넌트를 동적으로 변경하는 방법
         dog2.setImageResource(R.drawable.dog3);
-        resourceTextview.setText("안녕하십니까");
+        resourceTextview.setText("여라나라 인사");
 
         // res에 정의된 string을 가져오는 방법
         String content = getApplicationContext().getResources().getString(R.string.define_string);
         changeTextview.setText(content);
-        
+
+        resourceTextview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                for (String greeting : getApplicationContext().getResources().getStringArray(R.array.define_string_array)){
+                    Toast.makeText(getApplicationContext(),greeting,Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
     }
 }

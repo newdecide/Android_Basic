@@ -3,6 +3,7 @@ package com.study.myapplication;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -15,6 +16,8 @@ public class MainActivity extends AppCompatActivity {
     ImageView dog1, dog2;
     TextView resourceTextview, changeTextview;
     ArrayList<String> greetArray = new ArrayList<>();
+
+    private long mLastClickTime = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +40,10 @@ public class MainActivity extends AppCompatActivity {
         resourceTextview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (SystemClock.elapsedRealtime() - mLastClickTime < 1000){
+                    return;
+                }
+                mLastClickTime = SystemClock.elapsedRealtime();
                 for (String greeting : getApplicationContext().getResources().getStringArray(R.array.define_string_array)){
                     Toast.makeText(getApplicationContext(),greeting,Toast.LENGTH_SHORT).show();
                     greetArray.add(greeting);

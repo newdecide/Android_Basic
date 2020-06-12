@@ -50,9 +50,19 @@ public class MainActivity extends AppCompatActivity {
                 }
                 System.out.println(greetArray);
                 resourceTextview.append("\n");
-                for (String greet : greetArray){
-                    resourceTextview.append(greet+ ", ");
+
+//                for (String greet : greetArray){
+//                        resourceTextview.append(greet + ", ");
+//                }
+
+                for (int i = 0; i < greetArray.size(); i++){
+                    if (i != greetArray.size()-1) {
+                        resourceTextview.append(greetArray.get(i) + ", ");
+                    } else {
+                        resourceTextview.append(greetArray.get(i));
+                    }
                 }
+
             }
         });
     }

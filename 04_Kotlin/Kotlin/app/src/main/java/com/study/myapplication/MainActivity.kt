@@ -3,7 +3,6 @@ package com.study.myapplication
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
-import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
@@ -42,9 +41,16 @@ class MainActivity : AppCompatActivity() {
             ViewWrite("Long 타입 입니다.")
         }
 
+        StringReturnFunction("\nStringReturnFunction\n문자열 리턴 함수")
+
     }
-    fun ViewWrite( any : Any){
+    fun ViewWrite(any : Any){
         var view_write = findViewById<TextView>(R.id.writetext)
         view_write.text = "${view_write.text}${any.toString()}\n"
     }
+
+    fun StringReturnFunction(s: String): Any? {
+        return ViewWrite(s)
+    }
+    
 }

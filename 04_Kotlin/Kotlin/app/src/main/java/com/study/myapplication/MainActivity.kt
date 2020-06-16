@@ -43,6 +43,7 @@ class MainActivity : AppCompatActivity() {
 
         StringReturnFunction("\nStringReturnFunction\n문자열 리턴 함수")
 
+        TwoParameterReturnFunction(200616, "두개의 파라미터 리턴")
     }
     fun ViewWrite(any : Any){
         var view_write = findViewById<TextView>(R.id.writetext)
@@ -52,5 +53,9 @@ class MainActivity : AppCompatActivity() {
     fun StringReturnFunction(s: String): Any? {
         return ViewWrite(s)
     }
-    
+
+    fun TwoParameterReturnFunction(i: Int, s: String){
+        ViewWrite("\nTwoParameterReturnFunction\n "+i.toString() + ", " + s)
+
+    }
 }

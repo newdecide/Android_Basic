@@ -2,6 +2,7 @@ package com.study.myapplication
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.TextView
 import java.util.*
 
@@ -44,6 +45,8 @@ class MainActivity : AppCompatActivity() {
         StringReturnFunction("\nStringReturnFunction\n문자열 리턴 함수")
 
         TwoParameterReturnFunction(200616, "두개의 파라미터 리턴")
+
+        InlineFunction("\nInline Function", "\n한줄이므로 중괄호({}) 생략 가능")
     }
     fun ViewWrite(any : Any){
         var view_write = findViewById<TextView>(R.id.writetext)
@@ -56,6 +59,8 @@ class MainActivity : AppCompatActivity() {
 
     fun TwoParameterReturnFunction(i: Int, s: String){
         ViewWrite("\nTwoParameterReturnFunction\n "+i.toString() + ", " + s)
-
     }
+
+    fun InlineFunction(s1 : String, s2 : String) = ViewWrite(s1 + s2)
+
 }

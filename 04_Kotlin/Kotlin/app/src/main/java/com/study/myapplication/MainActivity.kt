@@ -47,6 +47,8 @@ class MainActivity : AppCompatActivity() {
         TwoParameterReturnFunction(200616, "두개의 파라미터 리턴")
 
         InlineFunction("\nInline Function", "\n한줄이므로 중괄호({}) 생략 가능")
+
+        NoParameterFunction()
     }
     fun ViewWrite(any : Any){
         var view_write = findViewById<TextView>(R.id.writetext)
@@ -62,5 +64,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun InlineFunction(s1 : String, s2 : String) = ViewWrite(s1 + s2)
+
+    fun NoParameterFunction(){
+        ViewWrite("\nNoParameterFunction\n파라미터 없이 함수 사용 가능")
+    }
 
 }

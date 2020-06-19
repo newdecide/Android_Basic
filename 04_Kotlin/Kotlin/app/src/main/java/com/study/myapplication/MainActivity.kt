@@ -2,7 +2,6 @@ package com.study.myapplication
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.widget.TextView
 import java.util.*
 
@@ -49,8 +48,13 @@ class MainActivity : AppCompatActivity() {
         InlineFunction("\nInline Function", "\n한줄이므로 중괄호({}) 생략 가능")
 
         NoParameterFunction()
+
+        HigherFunction({ViewWrite("\nHigherFunction")})
+
+        HigherFunction(::HelloFunction)
+
     }
-    fun ViewWrite(any : Any){
+    fun ViewWrite(any: Any?){
         var view_write = findViewById<TextView>(R.id.writetext)
         view_write.text = "${view_write.text}${any.toString()}\n"
     }
@@ -69,4 +73,10 @@ class MainActivity : AppCompatActivity() {
         ViewWrite("\nNoParameterFunction\n파라미터 없이 함수 사용 가능")
     }
 
+    fun HigherFunction( f : () -> Unit){
+        f()
+    }
+    fun HelloFunction(){
+        ViewWrite("고차 함수 호출")
+    }
 }

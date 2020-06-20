@@ -53,6 +53,8 @@ class MainActivity : AppCompatActivity() {
 
         HigherFunction(::HelloFunction)
 
+        VariableUseFunction1(ViewWrite("\nVariableUseFunction1"))
+        VariableUseFunction2("\nVariableUseFunction2 \n변수로 함수 사용2")
     }
     fun ViewWrite(any: Any?){
         var view_write = findViewById<TextView>(R.id.writetext)
@@ -79,4 +81,7 @@ class MainActivity : AppCompatActivity() {
     fun HelloFunction(){
         ViewWrite("고차 함수 호출")
     }
+
+    var VariableUseFunction1 = { a: Any -> ViewWrite("변수로 함수 사용1")}
+    var VariableUseFunction2 : (String) -> Any? = :: StringReturnFunction
 }

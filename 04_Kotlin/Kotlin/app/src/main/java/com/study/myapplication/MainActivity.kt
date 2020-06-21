@@ -55,6 +55,12 @@ class MainActivity : AppCompatActivity() {
 
         VariableUseFunction1(ViewWrite("\nVariableUseFunction1"))
         VariableUseFunction2("\nVariableUseFunction2 \n변수로 함수 사용2")
+
+        val ReadOnlyList = listOf<String>("읽기 전용 리스트", "Read", "Only", "List" ,"String")
+        ViewWrite("\nCollection_ReadOnlyList")
+        for (i in 0 .. ReadOnlyList.size - 1){
+            ViewWrite(ReadOnlyList.get(i).toString())
+        }
     }
     fun ViewWrite(any: Any?){
         var view_write = findViewById<TextView>(R.id.writetext)
@@ -84,4 +90,6 @@ class MainActivity : AppCompatActivity() {
 
     var VariableUseFunction1 = { a: Any -> ViewWrite("변수로 함수 사용1")}
     var VariableUseFunction2 : (String) -> Any? = :: StringReturnFunction
+
+
 }

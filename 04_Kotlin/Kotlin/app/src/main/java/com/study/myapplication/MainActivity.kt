@@ -2,6 +2,7 @@ package com.study.myapplication
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.TextView
 import java.util.*
 
@@ -56,11 +57,24 @@ class MainActivity : AppCompatActivity() {
         VariableUseFunction1(ViewWrite("\nVariableUseFunction1"))
         VariableUseFunction2("\nVariableUseFunction2 \n변수로 함수 사용2")
 
-        val ReadOnlyList = listOf<String>("읽기 전용 리스트", "Read", "Only", "List" ,"String")
+        val ReadOnlyList = listOf<String>("읽기 전용 리스트", "Read", "Only", "List" ,"String" ,"수정 불가능")
         ViewWrite("\nCollection_ReadOnlyList")
         for (i in 0 .. ReadOnlyList.size - 1){
             ViewWrite(ReadOnlyList.get(i).toString())
         }
+
+        val EditableList = mutableListOf<String>()
+        ViewWrite("\nCollection_EditableList")
+        EditableList.add("수정 가능 리스트")
+        EditableList.add("Editable")
+        EditableList.add("List")
+        EditableList.add("String")
+        EditableList.add("수정가능")
+        ViewWrite(EditableList.toString())
+
+        EditableList.removeAt(3)
+        ViewWrite("EditableList 3번째 요소 제거")
+        ViewWrite(EditableList.toString())
     }
     fun ViewWrite(any: Any?){
         var view_write = findViewById<TextView>(R.id.writetext)

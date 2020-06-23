@@ -75,6 +75,9 @@ class MainActivity : AppCompatActivity() {
         EditableList.removeAt(3)
         ViewWrite("EditableList 3번째 요소 제거")
         ViewWrite(EditableList.toString())
+
+        ViewWrite("\nfiveToExitLoop")
+        fiveToExitLoop()
     }
     fun ViewWrite(any: Any?){
         var view_write = findViewById<TextView>(R.id.writetext)
@@ -105,5 +108,12 @@ class MainActivity : AppCompatActivity() {
     var VariableUseFunction1 = { a: Any -> ViewWrite("변수로 함수 사용1")}
     var VariableUseFunction2 : (String) -> Any? = :: StringReturnFunction
 
-
+    fun fiveToExitLoop(){
+        fiveToExit@ for (i in 0..2){
+            for (j in 0..10){
+                if(j == 5) break@fiveToExit
+                ViewWrite("i -> $i, j -> $j")
+            }
+        }
+    }
 }

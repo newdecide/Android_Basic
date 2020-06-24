@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
+import java.lang.Exception
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
@@ -78,6 +79,16 @@ class MainActivity : AppCompatActivity() {
 
         ViewWrite("\nfiveToExitLoop")
         fiveToExitLoop()
+
+        ViewWrite("\nArithmeticException")
+        var divNumber = 0;
+        try {
+            624 / divNumber
+        } catch (e: Exception){
+            ViewWrite(e)
+        } finally {
+            ViewWrite("0으로 나눌 수 없습니다.")
+        }
     }
     fun ViewWrite(any: Any?){
         var view_write = findViewById<TextView>(R.id.writetext)

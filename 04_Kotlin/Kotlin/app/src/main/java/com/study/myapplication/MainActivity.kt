@@ -89,6 +89,14 @@ class MainActivity : AppCompatActivity() {
         } finally {
             ViewWrite("0으로 나눌 수 없습니다.")
         }
+
+        ViewWrite("\nNull 체크")
+
+        //var notnullable:Int = null
+        var nullbale:Int? = null
+
+        ViewWrite("var notnullable:Int = null -> error")
+        ViewWrite("var nullbale:Int? = null")
     }
     fun ViewWrite(any: Any?){
         var view_write = findViewById<TextView>(R.id.writetext)

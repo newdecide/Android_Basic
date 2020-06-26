@@ -97,6 +97,10 @@ class MainActivity : AppCompatActivity() {
 
         ViewWrite("var notnullable:Int = null -> error")
         ViewWrite("var nullbale:Int? = null")
+
+        ViewWrite("\nGreetClass")
+        GreetClass()
+        GreetClass("hello everyone", "my name is Detective Conan").showInfor()
     }
     fun ViewWrite(any: Any?){
         var view_write = findViewById<TextView>(R.id.writetext)

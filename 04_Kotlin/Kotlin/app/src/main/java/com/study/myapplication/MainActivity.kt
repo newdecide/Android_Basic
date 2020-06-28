@@ -102,6 +102,12 @@ class MainActivity : AppCompatActivity() {
         GreetClass()
         GreetClass("hello everyone", "my name is Detective Conan").showInfor()
         ViewWrite(GreetClass().greet + ". "  + GreetClass().introduce)
+
+        ChildClass().namefunction()
+        ChildClass().parentfunction()
+        ParentClass()
+
+
     }
     fun ViewWrite(any: Any?){
         var view_write = findViewById<TextView>(R.id.writetext)
